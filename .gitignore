@@ -15,6 +15,9 @@ local.properties
 .classpath
 .settings/
 .loadpath
+workspace.xml
+local.properties
+settings.gradle
 
 # External tool builders
 .externalToolBuilders/

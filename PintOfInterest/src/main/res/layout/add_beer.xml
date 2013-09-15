@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="201dp"
+        android:layout_height="77dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Add Beer"
+        android:id="@+id/addBeer_lbl"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="243dp"
+        android:layout_weight="20">
+
+        <ImageView
+            android:layout_width="84dp"
+            android:layout_height="92dp"
+            android:id="@+id/beer_img"
+            android:layout_gravity="center_horizontal|top"
+            android:src="@drawable/com_facebook_profile_default_icon" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:ems="10"
+                android:id="@+id/beerName_txt" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="110dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/beerDesc_txt"
+                android:maxLength="500"
+                android:text="Description"
+                android:gravity="bottom" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/beerStyle_txt"
+                android:layout_gravity="left|center_vertical"
+                android:text="Style of Beer" />
+
+            <ExpandableListView
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:id="@+id/expandableListView"
+                android:layout_gravity="left|center_vertical" />
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar"
+                android:layout_marginLeft="3dp"
+                android:numStars="5"
+                android:rating="3" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/find_pub"
+        android:src="@drawable/com_facebook_place_default_icon"
+        android:layout_weight="30"
+        android:layout_marginTop="-43dp" />
+
+    <EditText
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Pub or Bar Name"
+        android:ems="10"
+        android:id="@+id/location_txt" />
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dp"
+        android:id="@+id/linearLayout"
+        android:layout_gravity="left|center_vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="77dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Beer Information"
+            android:id="@+id/beerInfo_lbl"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="243dp"
+            android:layout_weight="20" >
+
+            <ImageView
+                android:layout_width="84dp"
+                android:layout_height="92dp"
+                android:id="@+id/beer_img"
+                android:layout_gravity="center_horizontal|top"
+                android:src="@drawable/com_facebook_profile_default_icon" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Name"
+                    android:ems="10"
+                    android:id="@+id/beerName_txt" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="110dp"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/beerDesc_txt"
+                    android:maxLength="500"
+                    android:text="Description"
+                    android:gravity="bottom" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/beerStyle_txt"
+                    android:layout_gravity="left|center_vertical"
+                    android:text="Style of Beer" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText2"
+                    android:layout_gravity="left|center_vertical"
+                    android:text="Average Rating" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBar"
+                    android:layout_marginLeft="3dp"
+                    android:numStars="5"
+                    android:rating="3" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/find_pub"
+            android:src="@drawable/com_facebook_place_default_icon"
+            android:layout_weight="30"
+            android:layout_marginTop="-43dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="110dp"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:maxLength="500"
+            android:text="Locations"
+            android:gravity="top"
+            android:layout_marginTop="-20dp" />
+
+    </LinearLayout>
+</LinearLayout>
