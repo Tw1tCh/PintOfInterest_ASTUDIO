@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/../AndroidStudioProjects.iml" filepath="$PROJECT_DIR$/../AndroidStudioProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/PintOfInterest/PintOfInterest.iml" filepath="$PROJECT_DIR$/PintOfInterest/PintOfInterest.iml" />
       <module fileurl="file://$PROJECT_DIR$/PintOfInterestProject.iml" filepath="$PROJECT_DIR$/PintOfInterestProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PintOfInterest_ASTUDIO.iml" filepath="$PROJECT_DIR$/PintOfInterest_ASTUDIO.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/facebook/facebook.iml" filepath="$PROJECT_DIR$/libraries/facebook/facebook.iml" />
       <module fileurl="file://$PROJECT_DIR$/pintofinterest_astudio.iml" filepath="$PROJECT_DIR$/pintofinterest_astudio.iml" />
     </modules>

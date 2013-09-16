@@ -1,5 +1,6 @@
 package com.mossinc.pintofinterest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
@@ -8,13 +9,6 @@ import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.facebook.LoggingBehavior;
-import com.facebook.Request;
-import com.facebook.Response;
-import com.facebook.Session;
-import com.facebook.SessionState;
-import com.facebook.Settings;
-import com.facebook.model.GraphUser;
 import com.mossinc.pintofinterest.Views.BannerTile;
 import com.mossinc.pintofinterest.Views.BeerBig;
 import com.mossinc.pintofinterest.Views.BeerSmallBottom;
@@ -32,6 +26,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         LinearLayout bannerTile = (LinearLayout) findViewById(R.id.banner_tile);
         LinearLayout beerBigTile = (LinearLayout) findViewById(R.id.beer_big);
         LinearLayout beerSmallTileTop = (LinearLayout) findViewById(R.id.beer_small_top);
@@ -48,28 +44,6 @@ public class MainActivity extends Activity {
         venueBigTile.addView(new VenueBig(this));
         venueSmallTileTop.addView(new VenueSmallTop(this));
         venueSmallTileBottom.addView(new VenueSmallBottom(this));
-
-        Session.openActiveSession(this, true, new Session.StatusCallback() {
-
-            // callback when session changes state
-            @Override
-            public void call(Session session, SessionState state, Exception exception) {
-                if (session.isOpened()) {
-                    Log.i("MainActivity", "Session Open ");
-                    // make request to the /me API
-                    Request.newMeRequest(session, new Request.GraphUserCallback() {
-
-                        // callback after Graph API response with user object
-                        @Override
-                        public void onCompleted(GraphUser user, Response response) {
-                            if (user != null) {
-                                Log.i("MainActivity", "Logged in as " + user.getName());
-                            }
-                        }
-                    }).executeAsync();
-                }
-            }
-        });
 
     }
 
@@ -105,6 +79,11 @@ public class MainActivity extends Activity {
 
         final int tmp = id;
         Log.i("MainActivity", "Logging in... " + id);
+
+
+        Intent myIntent = new Intent(MainActivity.this, FacebookActivity.class);
+        Log.i("MainActivity", "Logging in...2 " + id);
+        this.startActivity(myIntent);
 
         // start Facebook Login
 
